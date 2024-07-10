@@ -1,0 +1,16 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: ./scripts/install-dependencies.sh
+    command: ant extensions
+
+ports:
+  - port: 8888
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
+    - redhat.java
+    - vscjava.vscode-maven
